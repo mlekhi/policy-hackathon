@@ -21,16 +21,19 @@ export default function WaitlistForm() {
         body: JSON.stringify({ email }),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to submit');
+        throw new Error(data.error || 'Failed to submit');
       }
 
       setStatus('success');
       setMessage("Thank you for joining our waitlist! We'll be in touch soon.");
       setEmail('');
     } catch (error) {
+      console.error('Waitlist submission error:', error);
       setStatus('error');
-      setMessage('Something went wrong. Please try again later.');
+      setMessage(error instanceof Error ? error.message : 'Something went wrong. Please try again later.');
     }
   };
 
