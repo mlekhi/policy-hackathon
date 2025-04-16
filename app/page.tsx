@@ -12,6 +12,12 @@ export default function Home() {
       <About />
       <WaitlistForm />
       <Footer />
+
+      <style jsx>{`
+        .clip-diagonal {
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+      `}</style>
     </main>
   );
 }
