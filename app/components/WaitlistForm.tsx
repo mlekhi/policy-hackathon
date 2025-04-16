@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function WaitlistForm() {
   const [email, setEmail] = useState('');
@@ -36,14 +37,39 @@ export default function WaitlistForm() {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#2f4f97]">
       <div className="container mx-auto">
-        <div className="max-w-xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-xl mx-auto text-center"
+        >
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-4xl font-bold text-white mb-8"
+          >
             Join the Waitlist
-          </h2>
-          <p className="text-xl text-white/80 mb-12">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-xl text-white/80 mb-12"
+          >
             Be the first to know when applications open for the next Ontario Policy Hackathon.
-          </p>
-          <form onSubmit={handleSubmit} className="space-y-6">
+          </motion.p>
+          <motion.form 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            onSubmit={handleSubmit} 
+            className="space-y-6"
+          >
             <div>
               <input
                 type="email"
@@ -69,14 +95,18 @@ export default function WaitlistForm() {
               {status === 'loading' ? 'Subscribing...' : 'Notify Me'}
             </button>
             {message && (
-              <p className={`text-sm ${
-                status === 'success' ? 'text-green-300' : 'text-red-300'
-              }`}>
+              <motion.p 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`text-sm ${
+                  status === 'success' ? 'text-green-300' : 'text-red-300'
+                }`}
+              >
                 {message}
-              </p>
+              </motion.p>
             )}
-          </form>
-        </div>
+          </motion.form>
+        </motion.div>
       </div>
     </section>
   );

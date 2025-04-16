@@ -1,13 +1,32 @@
+import { motion } from 'framer-motion';
+
 export default function Footer() {
   return (
     <footer className="py-8 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto">
-        <div className="flex justify-between items-center">
-          <p className="text-sm text-gray-500">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-between items-center"
+        >
+          <motion.p 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-sm text-gray-500"
+          >
             © {new Date().getFullYear()} Ontario Policy Hackathon
-          </p>
-          
-          <div className="flex space-x-6">
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex space-x-6"
+          >
             <a 
               href="https://www.instagram.com/ontariopolicyhackathon/" 
               className="text-gray-500 hover:text-[#2f4f97] transition-colors"
@@ -26,8 +45,8 @@ export default function Footer() {
                 />
               </svg>
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </footer>
   );
