@@ -12,8 +12,8 @@ export default function PolicyStatement() {
           className="max-w-5xl mx-auto text-center"
         >
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal text-[#2f4f97] leading-relaxed">
-          Canada has the potential to work better for everyone, but broken policies stand in the way. <br/>  <br/> It’s time to fix them together.
-
+            Canada can work better for everyone. Instead of accepting poor policy decisions, let's make{' '}
+            <span className="font-bold">better ones together</span>.
           </h2>
         </motion.div>
       </div>

@@ -15,9 +15,10 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen bg-white"
+      className="min-h-screen"
     >
       <Hero />
+      <div className="bg-white">
       <TriangleDivider />
       <PolicyStatement />
       <motion.div
@@ -35,7 +36,7 @@ export default function Home() {
         transition={{ duration: 0.6 }}
       >
         <ChallengeTopics />
-      </motion.div>
+      </motion.div></div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -44,6 +45,7 @@ export default function Home() {
       >
         <WaitlistForm />
       </motion.div>
+      <div className="bg-white">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +54,7 @@ export default function Home() {
       >
         <Footer />
       </motion.div>
-
+      </div>
       <style jsx>{`
         .clip-diagonal {
           clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);

@@ -2,21 +2,21 @@ import { motion } from 'framer-motion';
 
 export default function Footer() {
   return (
-    <footer className="py-8 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="container mx-auto">
+    <footer className="relative py-12 px-4 sm:px-6 lg:px-8 bg-white mt-20">
+      <div className="container mx-auto relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex justify-between items-center"
+          className="flex flex-col sm:flex-row justify-between items-center gap-4"
         >
           <motion.p 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm text-gray-500"
+            className="text-sm text-gray-600"
           >
             © {new Date().getFullYear()} Ontario Policy Hackathon
           </motion.p>
@@ -29,7 +29,7 @@ export default function Footer() {
           >
             <a 
               href="https://www.instagram.com/ontariopolicyhackathon/" 
-              className="text-gray-500 hover:text-[#2f4f97] transition-colors"
+              className="text-gray-600 hover:text-[#2f4f97] transition-colors"
               aria-label="Instagram"
             >
               <svg 
