@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
-const dmSans = DM_Sans({
+const workSans = Work_Sans({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
+  display: "swap",
+  variable: "--font-work-sans",
 });
 
 export const metadata: Metadata = {
-  title: "Ontario Policy Hackathon | Join the Waitlist",
-  description: "Join the Ontario Policy Hackathon - a 48-hour hands-on event where people from different fields come together to solve policy issues with real data. Sign up to be notified when applications open.",
-  keywords: ["policy hackathon", "ontario", "policy", "innovation", "social impact", "public policy", "hackathon", "data-driven policy"],
+  title: "Ontario Policy Hackathon | Innovate for Change",
+  description: "Join the Ontario Policy Hackathon - A 48-hour hands-on event where innovators come together to solve policy issues with real data. Be part of the solution for Ontario's future.",
+  keywords: ["Ontario Policy Hackathon", "policy innovation", "data-driven solutions", "Ontario government", "hackathon", "policy making", "civic tech", "Ontario tech"],
   authors: [{ name: "Ontario Policy Hackathon Team" }],
   creator: "Ontario Policy Hackathon",
   publisher: "Ontario Policy Hackathon",
@@ -24,8 +25,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Ontario Policy Hackathon | Join the Waitlist",
-    description: "Join the Ontario Policy Hackathon - a 48-hour hands-on event where people from different fields come together to solve policy issues with real data.",
+    title: "Ontario Policy Hackathon | Innovate for Change",
+    description: "Join the Ontario Policy Hackathon - A 48-hour hands-on event where innovators come together to solve policy issues with real data. Be part of the solution for Ontario's future.",
     url: 'https://ontariopolicyhackathon.ca',
     siteName: 'Ontario Policy Hackathon',
     images: [
@@ -41,8 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ontario Policy Hackathon | Join the Waitlist',
-    description: 'Join the Ontario Policy Hackathon - a 48-hour hands-on event where people from different fields come together to solve policy issues with real data.',
+    title: 'Ontario Policy Hackathon | Innovate for Change',
+    description: 'Join the Ontario Policy Hackathon - A 48-hour hands-on event where innovators come together to solve policy issues with real data. Be part of the solution for Ontario\'s future.',
     images: ['/twitter-image.svg'],
   },
   robots: {
@@ -56,21 +57,26 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+  },
+  themeColor: '#2f4f97',
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" className={workSans.variable}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={`${dmSans.variable} font-dm-sans antialiased`}>
+      <body className="font-work-sans">
         {children}
         <script
           type="application/ld+json"
