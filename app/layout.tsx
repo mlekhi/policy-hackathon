@@ -9,7 +9,7 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ontario Policy Hackathon | Innovate for Change",
+  title: "Ontario Policy Hackathon",
   description: "Join the Ontario Policy Hackathon - A 48-hour hands-on event where innovators come together to solve policy issues with real data. Be part of the solution for Ontario's future.",
   keywords: ["Ontario Policy Hackathon", "policy innovation", "data-driven solutions", "Ontario government", "hackathon", "policy making", "civic tech", "Ontario tech"],
   authors: [{ name: "Ontario Policy Hackathon Team" }],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Ontario Policy Hackathon | Innovate for Change",
+    title: "Ontario Policy Hackathon",
     description: "Join the Ontario Policy Hackathon - A 48-hour hands-on event where innovators come together to solve policy issues with real data. Be part of the solution for Ontario's future.",
     url: 'https://ontariopolicyhackathon.ca',
     siteName: 'Ontario Policy Hackathon',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ontario Policy Hackathon | Innovate for Change',
+    title: 'Ontario Policy Hackathon',
     description: 'Join the Ontario Policy Hackathon - A 48-hour hands-on event where innovators come together to solve policy issues with real data. Be part of the solution for Ontario\'s future.',
     images: ['/twitter-image.svg'],
   },
