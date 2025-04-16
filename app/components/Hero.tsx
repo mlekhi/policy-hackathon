@@ -25,7 +25,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl sm:text-2xl text-white/80 max-w-2xl"
           >
-            A 48-hour hands-on event where innovators come together to solve policy issues with real data.
+            A weekend to solve policy issues with real data.
           </motion.p>
         </div>
       </div>

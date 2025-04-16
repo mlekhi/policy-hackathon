@@ -51,7 +51,7 @@ export default function WaitlistForm() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl font-bold text-white mb-8"
           >
-            Join the Waitlist
+            join the waitlist
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

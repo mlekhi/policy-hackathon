@@ -6,6 +6,8 @@ import About from './components/About';
 import WaitlistForm from './components/WaitlistForm';
 import Footer from './components/Footer';
 import TriangleDivider from './components/TriangleDivider';
+import ChallengeTopics from './components/ChallengeTopics';
+import PolicyStatement from './components/PolicyStatement';
 
 export default function Home() {
   return (
@@ -17,10 +19,11 @@ export default function Home() {
     >
       <Hero />
       <TriangleDivider />
+      <PolicyStatement />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
         <About />
@@ -28,7 +31,15 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
+        <ChallengeTopics />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
         <WaitlistForm />
@@ -36,7 +47,7 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
       >
         <Footer />
