@@ -35,8 +35,31 @@ export default function WaitlistForm() {
   };
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#2f4f97]">
-      <div className="container mx-auto">
+    <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-[#2f4f97] overflow-hidden">
+      {/* Background pattern */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.06 }}
+        transition={{ duration: 1.2 }}
+        className="absolute inset-0 z-0"
+      >
+        <svg className="w-full h-full" width="100%" height="100%">
+          <pattern id="lines" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="60" stroke="white" strokeWidth="0.5" />
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#lines)" />
+        </svg>
+      </motion.div>
+
+      {/* Subtle gradient overlay */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.08 }}
+        transition={{ duration: 1.2 }}
+        className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent z-0"
+      />
+
+      <div className="container mx-auto relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
